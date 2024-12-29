@@ -30,15 +30,16 @@
                     <a href="#" class="login">Login</a>
                 </div>
                 
-                <!-- Бургер-меню -->
                 <div class="burger-menu">
                     <ul class="burger-menu-items">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#" class="sign-up">Sign up</a></li>
-                        <li><a href="#" class="login">Login</a></li>
+                        <div class="menu-items-btn">
+                            <a href="#" class="sign-up">Sign up</a>
+                            <a href="#" class="login">Login</a>
+                        </div>
                     </ul>
                     <button class="close-menu" onclick="toggleMenu()">&#10006;</button>
                 </div>
@@ -59,7 +60,7 @@
             <div class="destinations-block">
                 <div>
                     <h1>Choice Of</h1>
-                    <h1 style="font-size: 60px;">Destinations</h1>
+                    <h1 class="text-destinations">Destinations</h1>
                 </div>
                 <p style="color: #777;">Explore the beauty of god's earth <br>
                 in a beautiful forest and have fun</p>
@@ -115,8 +116,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-block1">
-            <nav>
+        <div class="footer-block1">      
                 <div class="footer-logo">GoTrieop</div>
                 <ul class="footer-menu">
                     <a href="#">Home</a>
@@ -124,7 +124,6 @@
                     <a href="#">Pricing</a>
                     <a href="#">Contact</a>
                 </ul>
-            </nav>
         </div>
     </footer>
     <script src="src.js"></script>

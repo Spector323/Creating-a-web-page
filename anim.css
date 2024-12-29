@@ -1,4 +1,4 @@
-@media (max-width: 960px)  {
+@media (max-width: 960px){
     header {
         padding: 20px 10px;
     }
@@ -19,6 +19,9 @@
 
     .burger {
         display: block;
+    }
+    .burger-menu.active {
+        display: flex;
     }
 
     .menu {
@@ -92,8 +95,6 @@
         text-align: center;
     }
 
-    
-
     .cta h2 {
         font-size: 24px;
     }
@@ -108,6 +109,8 @@
     }
 
     .subscribe-form {
+        display: flex;
+        align-items: center;
         flex-direction: column;
         width: 100%;
         gap: 10px;
@@ -125,6 +128,86 @@
     .destination img {
         max-width: 90%;
     }
+   
+    .menu-items-btn{
+        display: flex;
+        gap: 20px;
+    }
+    .burger-menu-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .burger-menu-items a:hover{
+        color: #FF7B4E;
+    }
+    .slider {
+        position: relative;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    
+    .slider img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .slider-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    
+    .slider-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    .slider-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .burger {
+        width: 30px;
+        height: 30px;
+        background: url('burger-icon.svg') no-repeat center center;
+        background-size: contain;
+        cursor: pointer;
+    }
+    .prev {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .text-destinations{
+        font-size: 40px;
+    }
+    .next {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
 }
 
 /* Для планшетов с шириной экрана до 1062px */
@@ -132,53 +215,23 @@
     .testimonials {
         gap: 20px;
     }
+    footer{
+        display: none;
+    }
 }
 
 /* Для слайдера */
-.slider {
-    position: relative;
-    max-width: 100%;
-    margin: 20px auto;
-}
 
-.slider img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.slider-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.slider-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.slider-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.burger {
-    display: none;
-    width: 30px;
-    height: 30px;
-    background: url('burger-icon.svg') no-repeat center center;
-    background-size: contain;
-    cursor: pointer;
-}
 
 /* Дополнительно стили для мобильных устройств */
 @media (max-width: 480px) {
+    .burger {
+        width: 30px;
+        height: 30px;
+        background: url('burger-icon.svg') no-repeat center center;
+        background-size: contain;
+        cursor: pointer;
+    }
     .logo {
         font-size: 18px;
     }
@@ -205,10 +258,14 @@
         flex-direction: column;
         justify-content: center;
         background-color: #fff;
-        max-width: 100%;
         border-radius: 60px ;
     }
-
+    .cta h2{
+        font-size: 16px;
+    }
+    .get-started-button {
+        padding: 15px 20px;
+    }
     .hero-image {
         max-width: 100%;
     }
@@ -216,53 +273,56 @@
     .slider-container {
         width: 100%;
     }
-
+    .ts h2{
+        font-size: 20px;
+    }
     .destination img {
-        max-width: 95%;
+    }
+    .newsletter h2{
+        font-size: 20px;
+    }
+    .subscribe-form{
+        display: flex;
+    }
+    .subscribeInput{
+        width: 80%;
+        height: 30px;
+    }
+    .subscribe-button{
+        width: 90%;
+        height: 30px;
+        font-size: 18px;
     }
 }
 
-/* Стили для бургер-меню */
-.burger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    .burger-menu.active {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    
+    .destinations{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
-.burger-icon {
-    width: 100%;
-    height: 4px;
-    background-color: #333;
-    margin: 5px 0;
-}
+/* Стили для бургер-меню */
+
+
+
 
 /* Стили для меню */
-.menu {
-    display: none;
-    gap: 20px;
-}
 
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-buttons a {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #1F5E37;
-    border-radius: 5px;
-}
 
 /* Стили для бургер-меню */
 .burger-menu {
@@ -310,19 +370,3 @@
 }
 
 /* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    .burger {
-        display: flex;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .burger-menu.active {
-        display: flex;
-    }
-    .destinations{
-        display: block;
-    }
-}

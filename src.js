@@ -20,7 +20,6 @@ function moveSlide(direction) {
     const offset = -100 * slide;
     document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
 
-    // Обновляем классы для активного слайда
     slides.forEach((slide, index) => {
         if (index === slide) {
             slide.classList.add('active');

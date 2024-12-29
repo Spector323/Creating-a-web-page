@@ -19,13 +19,12 @@ header {
     background: #1b6b3a;
     box-shadow: 0 -200px 100px -120px #1F5E37 inset;
     animation: background 8s infinite alternate;
-    width: 100%;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-top: 20px;
+    padding-inline: 100px;
+    max-width: 1600px;
+    margin-inline: auto;
 }
 .head-block1{
-    max-width: 1500px;
+    max-width: 1600px;
     margin-inline: auto;
 }
 
@@ -40,17 +39,57 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
 }
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+.burger-icon {
+    width: 100%;
+    height: 4px;
+    background-color: #f7eeee;
+    margin: 5px 0;
+}
+
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    animation: zurab 4s infinite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in;
+
+}
+@keyframes zurab {
+    0%{
+        color: rgb(255, 255, 255);
+    }
+    35%{ color: #1b6b3a;}
+    75%{ color: #FF584E;}
+    100%{ color: rgb(255, 255, 255);}
 }
 main{
-    max-width: 1500px;
+    padding-inline: 100px;
+    max-width: 1600px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -60,7 +99,7 @@ main{
     padding-top: 20px;
 }
 .menu {
-    display: none;
+    display: flex;
     gap: 20px;
 }
 
@@ -77,10 +116,17 @@ main{
     box-shadow: 0 3px 0 #C4C4C4;
     border-radius: 5px; 
 }
-.auth-buttons button {
-    margin-left: 10px;
-    padding: 10px 40px;
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    padding: 10px 20px;
     text-decoration: none;
+    color: #fff;
+    background-color: #1F5E37;
+    border-radius: 5px;
 }
 
 .sign-up{
@@ -91,8 +137,8 @@ main{
 }
 .login {
     background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
-    width: 158px;
-    height: 49px;
+    padding-inline: 30px;
+    text-align: center;
     border-radius: 100px;
     color: #f4f4f4;
 }
@@ -164,7 +210,6 @@ main{
     align-items: center;
     text-align: center;
     aspect-ratio: 16 / 9;
-    padding: 60px 20px;
 }
 .destinations-block{
     display: flex;
@@ -181,11 +226,11 @@ main{
     position: relative;
     width: 456px;
     border-radius: 20px;
-    margin: 0 auto;
     overflow: hidden;
 }
 
 .slider {
+
     display: flex;
     transition: transform 0.5s ease;
 }
@@ -224,14 +269,17 @@ main{
     font-weight: 600;
 }
 
-
+.text-destinations{
+    font-size: 60px;
+}
 .testimonials {
+    margin-top: 40px;
     background-color: #f8f8f8;
-    gap: 100px;
+    width: 100%;
     border-radius: 40px;
     display: flex;
     align-items: center;
-    justify-content:  flex-start;
+    justify-content:  space-between;
 }
 .img_1{
     border-radius: 40px;
@@ -244,8 +292,8 @@ main{
 
 }
 .ts{
+    padding: 0 10px;
     display: flex;
-    /* align-items: self-start; */
     flex-direction: column;
     gap: 60px;
 }
@@ -354,13 +402,22 @@ main{
 }
 
 footer {
-    text-align: center;
-    margin-bottom: 50px;
+    padding-inline: 100px;
+    max-width: 1600px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 40px;
 }
 
 .footer-block1{
-    max-width: 1500px;
-    margin-inline: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-menu {
     display: flex;
@@ -378,6 +435,9 @@ footer {
 .footer-menu a {
     text-decoration: none;
     color: #333;
+}
+.footer-menu a:hover{
+    color: #FF7B4E;
 }
 .sign-up-footer{
     color: #333;
